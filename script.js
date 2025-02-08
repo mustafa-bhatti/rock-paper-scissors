@@ -6,12 +6,12 @@ decide the winner by checking against the game rule
 display the message and both choice
 Repeat
  */
-// alert("This is console based project. Please open Devtools Console to Check the score");
+alert("This is console based project. Please open Devtools Console to Check the score");
 // Create a user variable - userChoice
 function getUserChoice() {
     let userChoice = "";
-    userChoice = prompt("Enter your move Rock,  Paper,  Scissor");
-    if (userChoice == "Rock" || userChoice == "Paper" || userChoice == "Scissor") {
+    userChoice = prompt("Enter your move Rock,  Paper,  Scissor").toLowerCase();
+    if (userChoice == "rock" || userChoice == "paper" || userChoice == "scissor") {
         return userChoice;
     }
     else {
@@ -19,7 +19,9 @@ function getUserChoice() {
         return getUserChoice();
     }
 }
-// console.log(getUserChoice());
+console.log(getUserChoice());
+
+// randomly generate a choice from Rock Paper Scissor
 
 function getChoice() {
     let num = Math.floor(Math.random() * 3);
@@ -35,3 +37,6 @@ function getChoice() {
     }
     return choice;
 }
+
+let humanScore  = 0;    
+let computerScore = 0;
