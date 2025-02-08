@@ -41,9 +41,6 @@ getChoice()
 let humanScore  = 0;    
 let computerScore = 0;
 //Choice Variables
-let userChoice = "";
-let choice = "";
-
-
-
+const userChoice = getUserChoice();
+const choice = getChoice();
 
