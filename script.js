@@ -7,40 +7,63 @@ display the message and both choice
 Repeat
  */
 alert("This is console based project. Please open Devtools Console to Check the score");
-// Create a user variable - userChoice
+// Create choice variables 
+
+
 function getUserChoice() {
     userChoice = prompt("Enter your move Rock,  Paper,  Scissor").toLowerCase();
     if (userChoice == "rock" || userChoice == "paper" || userChoice == "scissor") {
-        return userChoice;
+        return userChoice; //userChoice can only in lowercase rock,paper,scissors
     }
     else {
         console.warn("Wrong Entry.\nTry Again");
         return getUserChoice();
     }
 }
-console.log(getUserChoice());
+// console.log(getUserChoice());
+
 
 // randomly generate a choice from Rock Paper Scissor
 
 function getChoice() {
     let num = Math.floor(Math.random() * 3);
     if (num == 0) {
-        choice = "Rock";
+        choice = "rock";
     }
     else if (num == 1) {
-        choice = "Paper";
+        choice = "paper";
     }
     else {
-        choice = "Scissor"
+        choice = "scissor"
     }
-    return choice;
+    return choice;  //Choice can only in lowercase rock,paper,scissors
 }
 
-getChoice()
-// Score Variables
-let humanScore  = 0;    
-let computerScore = 0;
-//Choice Variables
-const userChoice = getUserChoice();
-const choice = getChoice();
 
+
+
+function playRound(userChoice,choice){
+    if (userChoice == choice){
+        console.log(`Its a Tie. ${userChoice} = ${choice}`);
+    }
+    else if (userChoice == "rock" && choice == "scissor"){
+        console.log(`You Win Rock Beats Scissor`);
+        humanScore +=1;
+
+    }
+    else if (userChoice == "scissor" && choice == "paper"){
+        console.log(`You Win Scissor Beats Paper`);
+        humanScore +=1;
+
+    }
+    else if (userChoice == "paper" && choice == "rock"){
+        console.log(`You Win Paper Beats Rock`);
+        humanScore +=1;
+
+    }
+    else{
+        console.log(`You lose! ${userChoice} defeated by ${choice}`);
+        computerScore +=1;
+    }
+    console.log(`User Score : ${humanScore}\nComputer Score : ${computerScore}`);
+}
