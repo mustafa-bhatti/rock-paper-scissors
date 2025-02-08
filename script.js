@@ -6,6 +6,7 @@ decide the winner by checking against the game rule
 display the message and both choice
 Repeat
  */
+alert("This is console based project. Please open Devtools Console to Check the score");
 // Create a user variable - userChoice
 function getUserChoice() {
     let userChoice = "";
