@@ -9,7 +9,6 @@ Repeat
 alert("This is console based project. Please open Devtools Console to Check the score");
 // Create a user variable - userChoice
 function getUserChoice() {
-    let userChoice = "";
     userChoice = prompt("Enter your move Rock,  Paper,  Scissor").toLowerCase();
     if (userChoice == "rock" || userChoice == "paper" || userChoice == "scissor") {
         return userChoice;
@@ -25,7 +24,6 @@ console.log(getUserChoice());
 
 function getChoice() {
     let num = Math.floor(Math.random() * 3);
-    let choice = "";
     if (num == 0) {
         choice = "Rock";
     }
@@ -38,6 +36,14 @@ function getChoice() {
     return choice;
 }
 
+getChoice()
 // Score Variables
 let humanScore  = 0;    
 let computerScore = 0;
+//Choice Variables
+let userChoice = "";
+let choice = "";
+
+
+
+
