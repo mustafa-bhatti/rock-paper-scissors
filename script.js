@@ -67,3 +67,20 @@ function playRound(userChoice,choice){
     }
     console.log(`User Score : ${humanScore}\nComputer Score : ${computerScore}`);
 }
+let humanScore  = 0;    
+let computerScore = 0;
+function playGame() {
+    console.log("Lets Start the Game");
+    // Score Variables
+
+    //Choice Variables
+    let userChoice = "";
+    let choice= "";
+    for (let i = 1; i <=5;i++) {
+        console.log(`Round  : ${i}`);
+        userChoice = getUserChoice();
+        choice = getChoice();
+        playRound(userChoice,choice);
+    }
+}
+playGame();
