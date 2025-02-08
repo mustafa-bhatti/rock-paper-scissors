@@ -7,3 +7,9 @@ display the message and both choice
 Repeat
  */
 // Create a user variable - userChoice
+function getUserChoice() {
+let userChoice = "";
+userChoice = prompt("Enter your move Rock,  Paper,  Scissor");
+return userChoice;
+}
+console.log(getUserChoice());
