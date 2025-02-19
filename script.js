@@ -69,18 +69,19 @@ function playRound(userChoice,choice){
 }
 let humanScore  = 0;    
 let computerScore = 0;
-function playGame() {
-    console.log("Lets Start the Game");
-    // Score Variables
 
-    //Choice Variables
-    let userChoice = "";
-    let choice= "";
-    for (let i = 1; i <=5;i++) {
-        console.log(`Round  : ${i}`);
-        userChoice = getUserChoice();
-        choice = getChoice();
-        playRound(userChoice,choice);
+console.log("Lets Start the Game");
+choice=getChoice();
+// Score Variables
+
+
+const btn = document.querySelectorAll(".image");
+btn.forEach(button => {
+        button.addEventListener("click",(e)=>{
+        e.stopPropagation();
+        playRound(e.target.title,getChoice());
     }
-}
-// playGame();
+    )})
+
+
+
