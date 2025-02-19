@@ -38,6 +38,7 @@ let totalTries = 0;
 const tries = document.querySelector(".tries");
 const userScore = document.querySelector(".user-score");
 const compScore = document.querySelector(".comp-score");
+const result = document.querySelector(".result");
 
 function playAgain() {
     return 1
@@ -47,6 +48,7 @@ function playRound(userChoice,choice){
         return playAgain()
     }
     if (userChoice == choice){
+        result.textContent = `Its a Tie. ${userChoice} = ${choice}`;
         console.log(`Its a Tie. ${userChoice} = ${choice}`);
     }
     else if (userChoice == "rock" && choice == "scissor"){
