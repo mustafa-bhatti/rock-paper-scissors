@@ -20,13 +20,30 @@ h1 {
     display: flex;
     justify-content: center;
     gap: 40px;
-    width:400px;
-    border: 1px solid brown;
+    max-width:450px;
     flex-wrap: wrap;
 }
 
 .image { 
     background-color: white;
-    width:150px;
+    width:200px;
     height: 150px;
+}
+.rock {
+    background-image: url(images/rock.png);
+    background-repeat: no-repeat;
+    background-size: contain ;
+}
+
+.paper {
+    background-image: url(images/paper.png);
+    background-repeat: no-repeat;
+    background-size: contain ;
+    background-position:center;
+}
+.scissor {
+    background-image: url(images/scissors.png);
+    background-repeat: no-repeat;
+    background-size: contain ;
+    background-position: center;
 }
