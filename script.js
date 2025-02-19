@@ -40,11 +40,34 @@ const userScore = document.querySelector(".user-score");
 const compScore = document.querySelector(".comp-score");
 const result = document.querySelector(".result");
 const comp = document.querySelector(".comp");
-function playAgain() {
-    return 1
+const finalResult  =document.querySelector(".final-result");
+const btnAgain = document.querySelector(".again");
+const hidden = document.querySelector(".hidden");
+function reset(){
+    hidden.classList.add("hidden");
+    humanScore = 0;
+    computerScore = 0;
+    totalTries = 0;
+    result.textContent = "None";
+    comp.classList = "image comp";
+    userScore.textContent = "0";
+    compScore.textContent = "0";
+    tries.textContent = "0";
 }
+function playAgain() {
+    if (computerScore > humanScore) {
+        finalResult.textContent = "You Lose";
+    }
+    else if (computerScore < humanScore) {
+        finalResult.textContent="You win";
+    }
+    else finalResult.textContent="Tt's a Tie";
+    hidden.classList.remove("hidden");
+    btnAgain.addEventListener("click",reset);
+}
+
 function playRound(userChoice,choice){
-    if (totalTries>=5){
+    if (totalTries>4){
         return playAgain()
     }
     switch (choice){

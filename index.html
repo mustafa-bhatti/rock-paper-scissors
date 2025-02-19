@@ -9,8 +9,8 @@
 <body>
     <h1> Rock - Paper - Scissors </h1>
     <div class="content-text">
-        <p>Total Tries - <span class="tries">0</span> </p>
-        <p>You  - <span class="user-score">0</span> Computer - <span class="comp-score">0</span></p>
+        <p>Total Tries - <span class="num tries">0</span> </p>
+        <p>You  - <span class="num user-score">0</span> Computer - <span class="num comp-score">0</span></p>
     </div>
     <div class="content">
         <div class="img-container">
@@ -21,13 +21,15 @@
         <div class="comp-container">
             <button class="image comp" title="comp"></button>
             <p>Result - <span class="result">None</span></p>
+            <div class="replay hidden">
+                <p>Final Result - <span class="final-result"></span></p>
+                <button class="again">Try Again</button>
+            </div>
 
         </div>
     </div>
     <div class="replay-container">
-        <div class="replay">
 
-        </div>
     </div>
     <script src="script.js"></script>
 </body>
