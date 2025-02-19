@@ -118,11 +118,14 @@ function playRound(userChoice,choice){
 
 const btn = document.querySelectorAll(".image");
 btn.forEach(button => {
+        if (button.title != "comp"){
         button.addEventListener("click",(e)=>{
         e.stopPropagation();
         playRound(e.target.title,getChoice());
     }
-    )})
+    )}
+})
+    
 
 
 
