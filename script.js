@@ -112,7 +112,7 @@ function playRound(userChoice,choice){
     tries.textContent = totalTries;
     userScore.textContent = humanScore
     compScore.textContent = computerScore;
-    console.log(`User Score : ${humanScore}\nComputer Score : ${computerScore}`);
+    console.log(`User Score : ${humanScore}\n Computer Score : ${computerScore}`);
 }
 
 
