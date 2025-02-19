@@ -39,7 +39,7 @@ const tries = document.querySelector(".tries");
 const userScore = document.querySelector(".user-score");
 const compScore = document.querySelector(".comp-score");
 const result = document.querySelector(".result");
-
+const comp = document.querySelector(".comp");
 function playAgain() {
     return 1
 }
@@ -47,26 +47,41 @@ function playRound(userChoice,choice){
     if (totalTries>=5){
         return playAgain()
     }
+    switch (choice){
+        case "rock":
+            comp.classList = "image rock";
+            break;
+        case "paper":
+            comp.classList="image paper";
+            break;
+        case "scissor":
+            comp.classList="image scissor";
+            break;
+    }
     if (userChoice == choice){
         result.textContent = `Its a Tie. ${userChoice} = ${choice}`;
         console.log(`Its a Tie. ${userChoice} = ${choice}`);
     }
     else if (userChoice == "rock" && choice == "scissor"){
-        console.log(`You Win Rock Beats Scissor`);
+        result.textContent = "You Win Rock Beats Scissor";
+        console.log("You Win Rock Beats Scissor");
         humanScore +=1;
 
     }
     else if (userChoice == "scissor" && choice == "paper"){
-        console.log(`You Win Scissor Beats Paper`);
+        result.textContent="You Win Scissor Beats Paper";
+        console.log("You Win Scissor Beats Paper");
         humanScore +=1;
 
     }
     else if (userChoice == "paper" && choice == "rock"){
-        console.log(`You Win Paper Beats Rock`);
+        result.textContent= "You Win Paper Beats Rock";
+        console.log("You Win Paper Beats Rock");
         humanScore +=1;
 
     }
     else{
+        result.textContent=`You lose! ${userChoice} defeated by ${choice}`;
         console.log(`You lose! ${userChoice} defeated by ${choice}`);
         computerScore +=1;
     }

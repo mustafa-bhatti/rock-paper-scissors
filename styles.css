@@ -57,5 +57,8 @@ h1 {
 .content-text{          
     text-align: center;
     font-size: 18px;
-    word-spacing: 10px;
+    word-spacing: 7px;
+}
+.comp {
+    background-image: url(images/waiting.png);
 }
