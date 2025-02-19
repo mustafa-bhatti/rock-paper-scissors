@@ -43,3 +43,12 @@ h1 {
 .scissor {
     background-image: url(images/scissors.png);
 }
+
+.content-text{          
+    text-align: center;
+    font-size: 18px;
+}
+.tries {
+    font-size: 20px;
+    font-family: sans-serif;
+}

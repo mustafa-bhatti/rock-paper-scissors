@@ -7,20 +7,7 @@ display the message and both choice
 Repeat
  */
 
-// Create choice variables 
 
-
-function getUserChoice() {
-    userChoice = prompt("Enter your move Rock,  Paper,  Scissor").toLowerCase();
-    if (userChoice == "rock" || userChoice == "paper" || userChoice == "scissor") {
-        return userChoice; //userChoice can only in lowercase rock,paper,scissors
-    }
-    else {
-        console.warn("Wrong Entry.\nTry Again");
-        return getUserChoice();
-    }
-}
-// console.log(getUserChoice());
 
 
 // randomly generate a choice from Rock Paper Scissor
@@ -41,8 +28,24 @@ function getChoice() {
 
 
 
+let humanScore  = 0;    
+let computerScore = 0;
 
+console.log("Lets Start the Game");
+choice=getChoice();
+// Score Variables
+let totalTries = 0;
+const tries = document.querySelector(".tries");
+const userScore = document.querySelector(".user-score");
+const compScore = document.querySelector(".comp-score");
+
+function playAgain() {
+    return 1
+}
 function playRound(userChoice,choice){
+    if (totalTries>=5){
+        return playAgain()
+    }
     if (userChoice == choice){
         console.log(`Its a Tie. ${userChoice} = ${choice}`);
     }
@@ -65,14 +68,12 @@ function playRound(userChoice,choice){
         console.log(`You lose! ${userChoice} defeated by ${choice}`);
         computerScore +=1;
     }
+    totalTries +=1;
+    tries.textContent = totalTries;
+    userScore.textContent = humanScore
+    compScore.textContent = computerScore;
     console.log(`User Score : ${humanScore}\nComputer Score : ${computerScore}`);
 }
-let humanScore  = 0;    
-let computerScore = 0;
-
-console.log("Lets Start the Game");
-choice=getChoice();
-// Score Variables
 
 
 const btn = document.querySelectorAll(".image");
