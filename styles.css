@@ -2,13 +2,31 @@
 body {
 
     background-color: black;
-    color: #ffff;
+    color: yellow;
     font-family: 'Pixelify Sans','Times New Roman', Times;
     font-weight: 700;
+    box-sizing: border-box;
 }
 
 h1 {
     text-align: center;
     font-size: 45px;
-    color: yellow;
+}
+.content{
+    display: flex;
+    justify-content: center;
+}
+.img-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    width:400px;
+    border: 1px solid brown;
+    flex-wrap: wrap;
+}
+
+.image { 
+    background-color: white;
+    width:150px;
+    height: 150px;
 }
