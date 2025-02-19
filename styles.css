@@ -45,6 +45,7 @@ h1 {
 .comp-container {
     max-width: min-content;
     word-spacing: 10px;
+    margin-left: 10px
 }
 .replay {
     margin-top: 30px;
